@@ -11,13 +11,13 @@ make build
 
 ### Leanファイルの実行
 ```bash
-make exec FILE=filename.lean
+make exec DIR=directory FILE=filename.lean
 ```
 
 例：
 ```bash
-make exec FILE=eratosthenes.lean
-make exec FILE=sample.lean
+make exec DIR=algorithms FILE=eratosthenes.lean
+make exec DIR=basics FILE=sample.lean
 ```
 
 ### その他のコマンド
@@ -25,7 +25,18 @@ make exec FILE=sample.lean
 - `make clean` - Dockerイメージを削除
 - `make help` - 利用可能なコマンドを表示
 
-## サンプルファイル
+## ディレクトリ構成
 
-- `eratosthenes.lean` - エラトステネスの篩の実装
-- `sample.lean` - その他のサンプルコード
+```
+learn-lean-language/
+├── src/
+│   ├── basics/
+│   │   └── sample.lean          # 基本的なサンプルコード
+│   └── algorithms/
+│       └── eratosthenes.lean    # エラトステネスの篩の実装
+├── tests/                       # テストファイル
+├── docs/                        # ドキュメント
+├── Dockerfile
+├── Makefile
+└── README.md
+```
