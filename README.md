@@ -18,6 +18,7 @@ make exec DIR=directory FILE=filename.lean
 ```bash
 make exec DIR=algorithms FILE=eratosthenes.lean
 make exec DIR=basics FILE=sample.lean
+make exec DIR=monads FILE=sample.lean
 ```
 
 ### その他のコマンド
