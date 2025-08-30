@@ -10,6 +10,9 @@ RUN curl https://raw.githubusercontent.com/leanprover/elan/master/elan-init.sh -
 
 ENV PATH="/root/.elan/bin:${PATH}"
 
+# Pre-install Lean toolchain to avoid downloading during execution
+RUN elan toolchain install stable && elan default stable
+
 WORKDIR /workspace
 
 CMD ["bash"]
